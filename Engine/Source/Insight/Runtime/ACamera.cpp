@@ -183,7 +183,6 @@ namespace Insight {
 		else {
 			SetOrthographicsProjectionValues(40.0f, 40.0f, m_NearZ, m_FarZ);
 		}
-
 	}
 
 	void ACamera::UpdateViewMatrix()

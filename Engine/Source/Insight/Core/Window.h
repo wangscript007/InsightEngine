@@ -27,7 +27,7 @@ namespace Insight {
 		
 		virtual ~Window() {}
 
-		virtual void OnUpdate(const float& deltaTime) = 0;
+		virtual void OnUpdate(const float DeltaMs) = 0;
 		virtual void OnFramePreRender() = 0;
 		virtual void OnRender() = 0;
 		virtual void ExecuteDraw() = 0;
@@ -46,8 +46,8 @@ namespace Insight {
 		virtual void SetEventCallback(const EventCallbackFn& callback) = 0;
 		virtual bool ProccessWindowMessages() = 0;
 		virtual void SetVSync(bool enabled) = 0;
-		virtual const bool& IsFullScreenActive() const = 0;
-		virtual const bool& IsVsyncActive() const = 0;
+		virtual bool IsFullScreenActive() const = 0;
+		virtual bool IsVsyncActive() const = 0;
 
 		virtual void* GetNativeWindow() const = 0;
 

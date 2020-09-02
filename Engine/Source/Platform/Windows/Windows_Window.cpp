@@ -643,7 +643,7 @@ namespace Insight {
 		Shutdown();
 	}
 
-	void WindowsWindow::OnUpdate(const float& deltaTime)
+	void WindowsWindow::OnUpdate(const float DeltaMs)
 	{
 		ProccessWindowMessages();
 	}
@@ -700,12 +700,12 @@ namespace Insight {
 		Renderer::SetVSyncEnabled(m_Data.VSyncEnabled);
 	}
 
-	const bool& WindowsWindow::IsVsyncActive() const
+	bool WindowsWindow::IsVsyncActive() const
 	{
 		return m_Data.VSyncEnabled;
 	}
 
-	const bool& WindowsWindow::IsFullScreenActive() const
+	bool WindowsWindow::IsFullScreenActive() const
 	{
 		return m_Data.FullScreenEnabled;
 	}

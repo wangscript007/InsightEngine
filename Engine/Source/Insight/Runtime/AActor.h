@@ -73,6 +73,7 @@ namespace Insight {
 		std::vector<StrongActorComponentPtr> GetAllSubobjects() const { return m_Components; }
 	private:
 		bool OnCollision(PhysicsEvent& e);
+
 	protected:
 		ActorComponents m_Components;
 		uint32_t m_NumComponents = 0;

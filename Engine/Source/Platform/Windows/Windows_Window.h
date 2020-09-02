@@ -33,7 +33,7 @@ namespace Insight {
 		WindowsWindow(const WindowProps& props);
 		virtual ~WindowsWindow();
 
-		virtual void OnUpdate(const float& deltaTime) override;
+		virtual void OnUpdate(const float DeltaMs) override;
 		virtual void OnFramePreRender() override;
 		virtual void OnRender() override;
 		virtual void ExecuteDraw() override;
@@ -60,8 +60,8 @@ namespace Insight {
 		// Window Attributes
 		virtual inline void SetEventCallback(const EventCallbackFn& callback) override { m_Data.EventCallback = callback; }
 		virtual void SetVSync(bool enabled) override;
-		virtual const bool& IsVsyncActive() const override;
-		virtual const bool& IsFullScreenActive() const override;
+		virtual bool IsVsyncActive() const override;
+		virtual bool IsFullScreenActive() const override;
 		virtual bool Init(const WindowProps& props);
 		virtual bool PostInit();
 	private:
@@ -74,7 +74,7 @@ namespace Insight {
 	private:
 
 		HWND	m_hWindow;
-		HMENU m_hContextMenu;
+		HMENU	m_hContextMenu;
 		HMENU	m_hMenuBar;
 		HMENU	m_hFileSubMenu;
 		HMENU	m_hEditSubMenu;
